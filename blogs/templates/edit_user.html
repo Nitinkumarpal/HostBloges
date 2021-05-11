@@ -1,0 +1,80 @@
+{% extends 'base1.html' %}
+{% load crispy_forms_tags %} 
+
+{% block body %}
+
+{%  load static %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'  %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'  %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map'  %}">
+
+
+
+<br><br>
+<div class="container mx-auto">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-3 pb-4">
+            <div class="card p-4">
+                <h4 class="card-title font-weight-bold text-center">Hello, {{ user.username|title }}</h4>
+                  <hr>
+                <div class="card-text">
+                    <p class="text-muted mb-0" style="font-size: 12px">Username:</p>
+                    <p>{{ user.username }}</p>
+                    <p class="text-muted mb-0" style="font-size: 12px">Name:</p>
+                      <p>{{ user.first_name }} {{ user.last_name }}</p>
+                      <p class="text-muted mb-0" style="font-size: 12px">Email:</p>
+                      <p>{{ user.email }} </p>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#profileModal">Edit Profile</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+    </div>
+</div>
+
+
+ <div class="col-sm-12 col-md-12 col-lg-9 pb-4">
+    <div class="modal fade" tabindex="-1" id="profileModal" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Profile</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form method="POST">
+                        {% csrf_token %}
+                        {{ user_form|crispy }}
+              </div>
+                <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Save changes</button>
+                  </form> 
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>  
+
+
+
+
+
+
+{% endblock body %}

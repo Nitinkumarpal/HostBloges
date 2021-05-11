@@ -1,0 +1,28 @@
+{% extends 'base1.html' %}{% load static %}
+{% block title %}
+Blogerlogin
+{% endblock title %}
+
+
+{% block body %}
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'  %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'  %}">
+<link rel="stylesheet" href="{% static 'css/custom.css'  %}">
+
+<h1>Add Post.........</h1>
+
+<form method="POSt">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <button>Post</button>
+</form>
+
+
+
+{% endblock body %}

@@ -1,0 +1,16 @@
+<html>
+<body>
+<form method="post">
+    {%csrf_token %}
+    <H2> Search Blog Here</H2>
+    {{form.as_p}}
+    <input type ="submit" value="Search">
+</form>
+ 
+{% for data in dataset %}
+<h3>{{data.blog_title}}</h3>
+<a href = "{% url 'blog' _id=data.id %}">Read More</a>
+<hr/>
+{% endfor %}
+</html>
+</body>

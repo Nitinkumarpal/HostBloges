@@ -1,0 +1,136 @@
+{% extends 'base1.html' %}{% load static %}
+{% block title %}
+blogpost
+{% endblock title %}
+
+
+{% block body %}
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'  %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'  %}">
+<link rel="stylesheet" href="{% static 'css/custom.css'  %}">
+
+
+<!-- <div class="container ">
+  <div class="mb-3" style="height: 300px; background-color: rgba(255,0,0,0.1);">
+    
+      
+        <h2> Latest Post</h2><ul class="nav nav-tabs nav-justified" id="myTab" role="tablist"><li>
+        <img class="mw-10 fa-2x" style="width:50px;" src="{% static 'icon/filter.png' %}" alt="Max-width 50%"> Filter by
+        search <div class="input-group">
+          
+
+            <form class="form-inline md-form mr-auto">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-unique btn-rounded btn-sm my-0 waves-effect waves-light"
+                type="submit">Search</button>
+            </form>
+
+        </li>
+        </ul>
+        </div>
+  </div>
+</div> -->
+<div class="row">
+  <div class="card col-sm-6" style="width: 18rem;">
+    <a href="/blogdetails"><img src="{% static 'media/10d.jpg' %}" class="card-img-top" alt="..."></a>
+    <div class="card-body">
+      <h5 class="card-title">Coding World</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card  col-sm-6" style="width: 18rem;">
+    <img src="{% static 'media/11d.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Porgramer</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card  col-sm-6" style="width: 18rem;">
+    <img src="{% static 'media/12d.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Hackers</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This card has even longer content than the first to show that equal height action.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="card col-sm-6" style="width: 18rem;" >
+    <img src="{% static 'media/13d.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Run on Code</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card col-sm-6 " style="width: 18rem;">
+    <img src="{% static 'media/14d.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Machine learining</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card col-sm-6" style="width: 18rem;">
+    <img src="{% static 'media/15d.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Aritficial Inteligance</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This card has even longer content than the first to show that equal height action.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  {%  for Blogs in Blogs %}
+  <div class="card col-sm-6" style="max-width: 18rem;">
+    <div class="card-header">{{ Blogs.title }}</div>
+    <div class="card-body">
+      <!-- <h5 class="card-title">{{ Blogs.title }}</h5> -->
+     
+        <p class=" text-muted">{{ Blogs.author }} </p>
+        <p class="card-text ">{{ Blogs.content | safe }}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">{{ Blogs.created_on }}</small>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+
+
+
+
+</div>
+
+
+
+{% endblock body %}

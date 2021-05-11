@@ -1,0 +1,29 @@
+{% extends 'base1.html' %}{% load static %}
+{% block title %}
+Blogerlogin
+{% endblock title %}
+
+
+{% block body %}
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'  %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'  %}">
+<link rel="stylesheet" href="{% static 'css/custom.css'  %}">
+
+
+<h1>{{post.title}}</h1>
+
+<small>By:{{post.auther.first_name}}
+    {{post.auther.name_name}}
+</small><br><hr><br>
+
+
+{{post.body}}
+
+
+{% endfor%}
+
+{% endblock body %}
