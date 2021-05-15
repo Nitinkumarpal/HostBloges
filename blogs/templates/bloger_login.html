@@ -1,0 +1,50 @@
+{% extends 'base1.html' %}{% load static %}
+{% block title %}
+Blogerlogin
+{% endblock title %}
+
+
+{% block body %}
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'  %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'  %}">
+<link rel="stylesheet" href="{% static 'css/custom.css'  %}">
+
+
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+            <h3>Welcome</h3>
+            <p>You are 30 seconds away from Registerd</p>
+            <a href="/blogersignup"><input type="submit" name="" value="signup" /><br /></a>
+        </div>
+        <div class="col-md-9 register-right">
+           
+            <div class="col-md-6 login-form-2">
+                <h3>Login for Form </h3>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Email *" name="lemail" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Your Password *" name="lpassword" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Login" />
+                    </div>
+                    <div class="form-group">
+
+                        <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

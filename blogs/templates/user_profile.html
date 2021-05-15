@@ -1,0 +1,53 @@
+{% extends 'base1.html' %}{% load static %}
+{% block title %}
+userprofile
+{% endblock title %}
+
+
+{% block body %}
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'  %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'  %}">
+<link rel="stylesheet" href="{% static 'css/custom.css'  %}">
+
+{% if user.is_authenticated %}
+
+
+{%  for allprofile in allprofile %}
+ <h2>{{request.user}}
+<h4>{{allprofile.firstname}}</h4>
+<h4>{{allprofile.lastname}}</h4>
+<h4>{{allprofile.email}}</h4>
+
+<h4>{{allprofile.phone}}</h4>
+
+{% endfor %}
+
+{% else %}
+<br><br><br><br><br><br><br>
+<div class="container ">
+  <div class="d-flex justify-content-center h-100">
+      <div class="user_card">
+          <div class="d-flex justify-content-center">
+              <div class="brand_logo_container">
+                  <img src="https://cdn.freebiesupply.com/logos/large/2x/pinterest-circle-logo-png-transparent.png"
+                      class="brand_logo" alt="Logo">
+              </div>
+          </div>
+         
+          Don't have an account? <a href="/signup" target="blank"><strong>register here</strong></a>!
+      </div>
+
+      </div>
+  </div>
+</div>
+
+{% endif %}
+
+
+{% endblock body %}
+
+

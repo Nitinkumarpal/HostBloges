@@ -1,0 +1,203 @@
+{% extends 'base1.html' %}
+{% block title %}
+Home
+{% endblock title %}
+{% load static %}
+{% block body %}
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'  %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'  %}">
+<link rel="stylesheet" href="{% static 'css/custom.css'  %}">
+
+
+
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active size-1">
+      <img src=" {% static 'media/0d.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item size-1">
+      <img src=" {% static 'media/4d.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item size-1">
+      <img src=" {% static 'media/6d.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container bg-light">
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 mt-3">
+      <div class="card">
+        <div class="card-horizontal">
+          <div class="img-square-wrapper">
+            <img class="img-size" src=" {% static 'media/d30.jpg' %}" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Coding Club</h4>
+            <p class="card-text">In signal processing, data compression, source coding,[1] or bit-rate reduction is the
+              process of encoding information using fewer bits than the original representation.[2] Any particular
+              compression is either lossy or lossless. Lossless compression reduces bits by identifying and eliminating
+              statistical redundancy. No information is lost in lossless compression. Lossy compression reduces bits by
+              removing unnecessary or less important information.[3] Typically, a device that performs data compression
+              is referred to as an encoder, and one that performs the reversal of the process (decompression) as a
+              decoder.
+              The process of reducing the size of a data file is often referred to as data compression. In the context
+              of data transmission, it is called source coding; encoding done at the source of the data before it is
+              stored or transmitted.[4] Source coding should not be confused with channel coding, for error detection
+              and correction or line coding, the means for mapping data onto a signal.
+
+              Compression is useful because it reduces the resources required to store and transmit data. Computational
+              resources are consumed in the compression and decompression processes. Data compression is subject to a
+              space–time complexity trade-off. For instance,
+            </p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"></small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card-group mx-auto">
+  <div class="card bg-secondary">
+    <img src=" {% static 'media/d24.png' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">PROGRAMER</h5>
+      <p class="card-text">A computer programmer, sometimes called a software developer, a programmer or more recently a coder (especially in more informal contexts), is a person who creates computer software. The term computer programmer can refer to a specialist in one area of computers, or to a generalist who writes code for many kinds of software.
+
+        A programmer's most often-used computer language (e.g., Assembly, COBOL, C, C++, C#, JavaScript, Lisp, Python, Java) may be prefixed to the term programmer. Some who work with web programming languages also prefix their titles with web.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src=" {% static 'media/d29.jpg' %} "class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">COMPUTER</h5>
+      <p class="card-text">Computer programming is the process of designing and building an executable computer program to accomplish a specific computing result or to perform a specific task. Programming involves tasks such as: analysis, generating algorithms, profiling algorithms' accuracy and resource consumption, and the implementation of algorithms in a chosen programming language (commonly referred to as coding).</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card bg-secondary">
+    <img src=" {% static 'media/d12.jpg' %} " class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">SOFTWARE</h5>
+      <p class="card-text">Software is a collection of instructions and data that tell a computer how to work. This is in contrast to physical hardware, from which the system is built and actually performs the work. In computer science and software engineering, computer software is all information processed by computer systems, including programs and data. Computer software includes computer programs, libraries and related non-executable data, such as online documentation or digital media. Computer hardware and software require each other and neither can be realistically used on its own.
+
+         </p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+<div class="alert alert-light" role="alert">
+  This is a secondary alert—check it out!
+</div>
+<div class="row ">
+  <div class="col-lg-3">
+    <img class="rounded-circle rounded-sm icon-1 " src="{% static 'icon/camera-icon.png' %} " alt="Generic placeholder image" width="140" height="140">
+    <h2>Clear Focus</h2>
+    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-3">
+    <img class="rounded-circle rounded-sm icon-1" src="{% static 'icon/rocket-ship.png' %}" alt="Generic placeholder image" width="140" height="140">
+    <h2>High Quality</h2>
+    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-3">
+    <img class="rounded-circle rounded-sm icon-1 "src="{% static 'icon/logo-twitter.png' %}" alt="Generic placeholder image" width="140" height="140">
+    <h2>Performence</h2>
+    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-3">
+    <img class="rounded-circle rounded-sm icon-1" src="{% static 'icon/live-chat-icon.png' %}" alt="Generic placeholder image" width="140" height="140">
+    <h2>Regular Content</h2>
+    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+</div><!-- /.row -->
+
+<!-- Testimonials -->
+
+<div class="container-fluid px-2 px-md-4 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+      <div class="col-md-10 col-lg-9 col-xl-8">
+          <div class="card card-main border-0 text-center">
+              <h5 class="font-weight-bold mb-4">What our clients are saying<br>about us.</h5>
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                      <div class="carousel-item">
+                          <div class="card border-0 card-0">
+                              <div class="card profile py-3 px-4">
+                                  <div class="text-center"> <img src="https://i.imgur.com/gazoShk.jpg" class="img-fluid profile-pic"> </div>
+                                  <h6 class="mb-0 mt-2">Marielle Haag</h6> <small>Backend Developer</small>
+                              </div> <img class="img-fluid open-quotes" src="https://i.imgur.com/Hp91vdT.png" width="20" height="20">
+                              <p class="content mb-0">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <img class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png" width="20" height="20">
+                          </div>
+                      </div>
+                      <div class="carousel-item active">
+                          <div class="card border-0 card-0">
+                              <div class="card profile py-3 px-4">
+                                  <div class="text-center"> <img src="https://i.imgur.com/oW8Wpwi.jpg" class="img-fluid profile-pic"> </div>
+                                  <h6 class="mb-0 mt-2">Ximena Vegara</h6> <small>UI/UX Designer</small>
+                              </div> <img class="img-fluid open-quotes" src="https://i.imgur.com/Hp91vdT.png" width="20" height="20">
+                              <p class="content mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua.</p> <img class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png" width="20" height="20">
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="card border-0 card-0">
+                              <div class="card profile py-3 px-4">
+                                  <div class="text-center"> <img src="https://i.imgur.com/ndQx2Rg.jpg" class="img-fluid profile-pic"> </div>
+                                  <h6 class="mb-0 mt-2">John Paul</h6> <small>UI/UX Designer</small>
+                              </div> <img class="img-fluid open-quotes" src="https://i.imgur.com/Hp91vdT.png" width="20" height="20">
+                              <p class="content mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> <img class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png" width="20" height="20">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+{% endblock body %}

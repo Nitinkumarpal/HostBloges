@@ -1,0 +1,22 @@
+{% block sidebar %}
+
+<style>
+        .card{
+            box-shadow: 0 16px 48px #E3E7EB;
+        }
+       
+</style>
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right ">
+<div class="card my-4">
+        <h5 class="card-header">About Us</h5>
+    <div class="card-body">
+        <p class="card-text"> TBlogger is an American online content management system (CMS) which enables multi-user blogs with time-stamped entries. Pyra Labs developed it before being acquired by Google in 2003. Google hosts the blogs, which can be accessed through a subdomain of blogspot.com...!</p>
+        <a href="{% url 'blog_post' %}"
+           class="btn btn-danger">Know more!</a>
+    </div>
+</div>
+</div>
+
+{% endblock sidebar %}
